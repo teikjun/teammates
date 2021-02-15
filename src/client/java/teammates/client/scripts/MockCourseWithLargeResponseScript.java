@@ -52,9 +52,9 @@ public final class MockCourseWithLargeResponseScript {
     private static final String COURSE_NAME = "MockLargeCourse";
     private static final String COURSE_TIME_ZONE = "UTC";
 
-    private static final String INSTRUCTOR_ID = "LoadInstructor_id";
-    private static final String INSTRUCTOR_NAME = "LoadInstructor";
-    private static final String INSTRUCTOR_EMAIL = "tmms.test@gmail.tmt";
+    private static final String INSTRUCTOR_ID = "test@example.com";
+    private static final String INSTRUCTOR_NAME = "test";
+    private static final String INSTRUCTOR_EMAIL = "test@example.com";
 
     private static final String STUDENT_ID = "LoadStudent.tmms";
     private static final String STUDENT_NAME = "LoadStudent";
@@ -249,7 +249,7 @@ public final class MockCourseWithLargeResponseScript {
 
         RemoteApiOptions options = new RemoteApiOptions().server(appDomain, appPort);
 
-        if (ClientProperties.isTargetUrlDevServer()) {
+        if (true) {
             // Dev Server doesn't require credential.
             options.useDevelopmentServerCredential();
         } else {
