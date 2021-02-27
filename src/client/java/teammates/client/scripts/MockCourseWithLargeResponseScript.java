@@ -38,9 +38,9 @@ import teammates.storage.api.OfyHelper;
  */
 public final class MockCourseWithLargeResponseScript {
     // Change the following params for different course setup
-    private static final int NUMBER_OF_STUDENTS = 1000;
+    private static final int NUMBER_OF_STUDENTS = 600;
     private static final int NUMBER_OF_TEAMS = 100;
-    private static final int NUMBER_OF_FEEDBACK_QUESTIONS = 200;
+    private static final int NUMBER_OF_FEEDBACK_QUESTIONS = 25;
 
     // For each student, the number of responses depends on:
     // number_of_students / number_of_teams * (per team feedback strategy)
@@ -48,13 +48,13 @@ public final class MockCourseWithLargeResponseScript {
             FeedbackParticipantType.OWN_TEAM_MEMBERS_INCLUDING_SELF;
 
     // Change the course ID to be recognizable
-    private static final String COURSE_ID = "TestData.600S25Q111T";
+    private static final String COURSE_ID = "TestData.600S25Q001T";
     private static final String COURSE_NAME = "MockLargeCourse";
     private static final String COURSE_TIME_ZONE = "UTC";
 
-    private static final String INSTRUCTOR_ID = "teikjunhci@gmail.com";
-    private static final String INSTRUCTOR_NAME = "teikjunhci";
-    private static final String INSTRUCTOR_EMAIL = "teikjunhci@gmail.com";
+    private static final String INSTRUCTOR_ID = "test@example.com";
+    private static final String INSTRUCTOR_NAME = "test";
+    private static final String INSTRUCTOR_EMAIL = "test@example.com";
 
     private static final String STUDENT_ID = "LoadStudent.tmms";
     private static final String STUDENT_NAME = "LoadStudent";
@@ -249,7 +249,7 @@ public final class MockCourseWithLargeResponseScript {
 
         RemoteApiOptions options = new RemoteApiOptions().server(appDomain, appPort);
 
-        if (false) {
+        if (true) {
             // Dev Server doesn't require credential.
             options.useDevelopmentServerCredential();
         } else {
