@@ -31,7 +31,7 @@ public final class Logger {
      * @see java.util.logging.Logger#info(String)
      */
     public void info(String msg) {
-        log.info(msg);
+        // log.info(msg);
     }
 
     /**
